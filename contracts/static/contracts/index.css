@@ -1,0 +1,307 @@
+* {
+    font-family: Gilroy, Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 1000px;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.container form {
+    position: relative;
+    text-align: center;
+}
+
+.container form input {
+    font-size: 25px;
+}
+
+.container form input[type="search"] {
+    width: auto;
+    border: 1px solid black;
+}
+
+.container form input[type="search"]:focus {
+    outline: none;
+}
+
+.container form input[type="submit"] {
+    background-color: blue;
+    color: white;
+}
+
+.container form p {
+    color: red;
+}
+
+.container #load {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    display: none;
+}
+
+.container #error {
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    margin: 0 auto;
+    display: none;
+}
+
+.container .contract_info {
+    display: none;
+}
+
+.container .contract_info .table {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.container .contract_info .table h3 {
+    font-weight: bold;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.container .contract_info #contract .table_data {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: none;
+    overflow-x: auto;
+}
+
+.container .contract_info #contract .table_data div {
+    display: grid;
+    grid-template-rows: 22px repeat(1, 1fr);
+    grid-template-columns: none;
+}
+
+.container .contract_info #status .table_data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+    overflow-x: auto;
+}
+
+.container .contract_info #status .table_data div {
+    display: grid;
+    grid-template-rows: 22px repeat(1, 1fr);
+    grid-template-columns: none;
+}
+
+.container .contract_info #address .table_data {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
+    overflow-x: auto;
+}
+
+.container .contract_info #address .table_data div {
+    display: grid;
+    grid-template-rows: 22px repeat(1, 1fr);
+    grid-template-columns: none;
+}
+
+.container .contract_info #rates .table_data {
+    display: grid;
+    /*grid-template-rows: 22px repeat(4, 1fr);*/
+    /*grid-template-columns: none;*/
+    overflow-x: auto;
+}
+
+.container .contract_info #rates .table_data div {
+    display: grid;
+    /*grid-template-columns: repeat(4, 1fr);*/
+    /*grid-template-rows: none;*/
+}
+
+.container .contract_info #admissions .table_data {
+    display: grid;
+    grid-template-rows: 22px repeat(3, 1fr);
+    grid-template-columns: none;
+    overflow-x: auto;
+}
+
+.container .contract_info #admissions .table_data div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+}
+
+.container .contract_info #accruals .table_data {
+    display: grid;
+    /*grid-template-rows: 22px repeat(3, 1fr);*/
+    /*grid-template-columns: none;*/
+    overflow-x: auto;
+}
+
+.container .contract_info #accruals .table_data div {
+    display: grid;
+    /*grid-template-columns: repeat(3, 1fr);*/
+    /*grid-template-rows: none;*/
+}
+
+.container .contract_info #contract .table_data div p:nth-child(1),
+.container .contract_info #status .table_data div p:nth-child(1),
+.container .contract_info #address .table_data div p:nth-child(1) {
+    background-color: #D5D5D5;
+}
+
+.container .contract_info #rates .table_data div:nth-child(1) p,
+.container .contract_info #admissions .table_data div:nth-child(1) p,
+.container .contract_info #accruals .table_data div:nth-child(1) p {
+    background-color: #D5D5D5;
+}
+
+.container .contract_info .table .table_data div p {
+    position: relative;
+    width: calc(100% - 2px);
+    height: auto;
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid grey;
+    display: block;
+}
+
+@media(max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .container .contract_info #contract .table_data {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: none;
+        overflow-x: auto;
+    }
+
+    .container .contract_info #contract .table_data div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+    }
+
+    .container .contract_info #address .table_data {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: none;
+        overflow-x: auto;
+    }
+
+    .container .contract_info #address .table_data div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+    }
+
+    .container .contract_info #rates .table_data {
+        display: grid;
+        /*grid-template-columns: repeat(5, 1fr);*/
+        /*grid-template-rows: none;*/
+        overflow-x: auto;
+    }
+
+    .container .contract_info #rates .table_data div {
+        display: grid;
+        /*grid-template-rows: repeat(4, 1fr);*/
+        /*grid-template-columns: none;*/
+    }
+
+    .container .contract_info #accruals .table_data {
+        display: grid;
+        /*grid-template-columns: repeat(4, 1fr);*/
+        /*grid-template-rows: none;*/
+        overflow-x: auto;
+    }
+
+    .container .contract_info #accruals .table_data div {
+        display: grid;
+        /*grid-template-rows: repeat(3, 1fr);*/
+        /*grid-template-columns: none;*/
+    }
+
+    .container .contract_info #contract .table_data div p:nth-child(1),
+    .container .contract_info #status .table_data div p:nth-child(1),
+    .container .contract_info #address .table_data div p:nth-child(1),
+    .container .contract_info #rates .table_data div:nth-child(1) p,
+    .container .contract_info #admissions .table_data div:nth-child(1) p,
+    .container .contract_info #accruals .table_data div:nth-child(1) p {
+        background-color: transparent;
+    }
+
+    .container .contract_info #contract .table_data div:nth-child(even),
+    .container .contract_info #address .table_data div:nth-child(even),
+    .container .contract_info #admissions .table_data div:nth-child(even),
+    .container .contract_info #status .table_data div p:nth-child(even),
+    .container .contract_info #rates .table_data div p:nth-child(even),
+    .container .contract_info #accruals .table_data div p:nth-child(even){
+        background-color: #D5D5D5;
+    }
+
+    .container .contract_info .table .table_data div p {
+        min-width: 230px;
+    }
+
+    .container .contract_info #admissions .table_data div p {
+        min-width: 130px;
+    }
+}
+
+@media(max-width: 500px) {
+    .container form input {
+        font-size: 15px;
+    }
+
+    .container #error {
+        width: 300px;
+        height: 300px;
+    }
+
+    .container .contract_info #contract .table_data div {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: none;
+    }
+
+    .container .contract_info #address .table_data div {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: none;
+    }
+
+    .container .contract_info #status .table_data {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: none;
+        overflow-x: auto;
+    }
+
+    .container .contract_info #contract .table_data div:nth-child(even),
+    .container .contract_info #address .table_data div:nth-child(even),
+    .container .contract_info #status .table_data div p:nth-child(even) {
+        background-color: transparent;
+    }
+
+    .container .contract_info #contract .table_data div p:nth-child(1),
+    .container .contract_info #status .table_data div p:nth-child(1),
+    .container .contract_info #address .table_data div p:nth-child(1) {
+        background-color: #D5D5D5;
+    }
+}
+
+@media(max-width: 300px) {
+    .container #error {
+        width: 250px;
+        height: 250px;
+    }
+}

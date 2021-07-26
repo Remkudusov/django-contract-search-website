@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'contracts/index.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'contracts/images/shortcut_icon.png' %}"/>
+    <title>Найти договор</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Поиск договора</h1>
+        <form id="find_contract" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="search" placeholder="Номер договора" id="number" name="number">
+            <input type="submit" id="find_contract" value="Найти">
+            <p id="contract_prompt">Номер договора ограничен 10-ю символами, латинскими буквами, цифрами, дефисом и слэшем!</p>
+        </form>
+        <div id="load">
+            <img src="{% static 'contracts/images/load.gif' %}" height="100%">
+        </div>
+        <div id="error">
+            <h1>Данных не найдено!</h1>
+            <img src="{% static 'contracts/images/error_icon.jpg' %}" height="80%">
+        </div>
+        <div class="contract_info" id="contract_info">
+            <div id="contract" class="table"></div>
+            <div id="status" class="table"></div>
+            <div id="address" class="table"></div>
+            <div id="rates" class="table"></div>
+            <div id="admissions" class="table"></div>
+            <div id="accruals" class="table"></div>
+        </div>
+    </div>
+    <script src="{% static 'contracts/index.js' %}"></script>
+</body>
+</html>
